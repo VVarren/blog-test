@@ -1,21 +1,49 @@
 import "./App.css";
 import React, { useState } from "react";
+import Blog from "./Blog.js";
 
 function App() {
-	const [count, setCount] = useState(0);
 	const [title, settitle] = useState("");
+	const [description, setdescription] = useState("");
+	const [blogs, setblogs] = useState([]);
+
+	function addBlog(title, description) {
+		const blog = {
+			title,
+			description,
+		};
+		setblogs([...blogs, blog]);
+	}
+	const blogE = blogs.map((blog) => (
+		<Blog title={blog.title} description={blog.description} />
+	));
+	function handleclick() {
+		addBlog(title, description);
+		settitle("");
+		setdescription("");
+	}
+
 	return (
-		<div className="flex-container">
-			<input
-				placeholder="Whats the title?"
-				onChange={(e) => settitle(e.target.value)}
-				value={title}
-			></input>
-			<textarea rows="5" cols="33"></textarea>
-			<button className="add" onClick={() => setCount()}>
-				+ Add the blog +
-			</button>
-		</div>
+		<>
+			<div className="flex-container">
+				<input
+					placeholder="Whats the title?"
+					onChange={(e) => settitle(e.target.value)}
+					value={title}
+				></input>
+				<textarea
+					rows="5"
+					cols="33"
+					placeholder="Description"
+					onChange={(e) => setdescription(e.target.value)}
+					value={description}
+				></textarea>
+				<button className="add" onClick={handleclick}>
+					+ Add the blog +
+				</button>
+			</div>
+			{blogE}
+		</>
 	);
 }
 

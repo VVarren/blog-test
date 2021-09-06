@@ -1,0 +1,14 @@
+.blog {
+	padding: 3%;
+	display: flex;
+	background-color: rgb(7, 77, 59);
+	width: 30%;
+	height: 30vh;
+	align-items: center;
+	justify-content: flex-start;
+	flex-direction: column;
+	border: solid 5px;
+	border-color: aqua;
+	margin: auto;
+	margin-bottom: 0.5em;
+}

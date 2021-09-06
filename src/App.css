@@ -3,7 +3,7 @@
 }
 
 .flex-container {
-	padding: 3%;
+	padding: 0.3%;
 	display: flex;
 	background-color: rgb(47, 5, 116);
 	width: 30%;
@@ -11,4 +11,5 @@
 	align-items: center;
 	justify-content: space-between;
 	flex-direction: column;
+	position: absolute;
 }
