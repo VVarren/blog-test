@@ -1,8 +1,6 @@
 import "./App.css";
 import React, { useState } from "react";
 import Blog from "./Blog.js";
-import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
 	const [title, settitle] = useState("");
@@ -40,9 +38,6 @@ function App() {
 					onChange={(e) => setdescription(e.target.value)}
 					value={description}
 				></textarea>
-				<button onClick={() => setblogs(blogs.slice(0, blogs.length - 1))}>
-					Delete
-				</button>
 				<button className="add" onClick={handleclick}>
 					+ Add the blog +
 				</button>
