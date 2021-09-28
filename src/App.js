@@ -44,6 +44,7 @@ function App() {
 				<button onClick={() => setblogs(blogs.slice(0, -1))}>Delete</button>
 			</div>
 			{blogE}
+
 		</>
 	);
 }
