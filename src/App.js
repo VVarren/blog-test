@@ -41,7 +41,6 @@ function App() {
 				<button className="add" onClick={handleclick}>
 					+ Add the blog +
 				</button>
-				<button onClick={() => setblogs(blogs.slice(0, -1))}>Delete</button>
 			</div>
 			{blogE}
 
