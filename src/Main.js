@@ -26,7 +26,9 @@ export default function Main() {
 					<Route path="/Home">
 						<Home />
 					</Route>
-					<Route path="/AllBlogs" component={AllBlogs}></Route>
+					<Route path="/AllBlogs">
+						<AllBlogs />
+					</Route>
 				</Switch>
 			</Router>
 		</>
