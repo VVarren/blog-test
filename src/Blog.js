@@ -9,7 +9,5 @@ function Blog(props) {
 		</div>
 	);
 }
-/*
- */
 
 export default Blog;
